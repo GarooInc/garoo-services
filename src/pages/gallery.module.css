@@ -1,0 +1,138 @@
+.galleryCard {
+    transition: all 0.3s ease;
+    border: none !important;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.galleryCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Contenedor para la imagen con tamaño fijo */
+.imageContainer {
+    width: 100%;
+    height: 200px;
+    /* Altura fija para todas las imágenes */
+    overflow: hidden;
+    position: relative;
+}
+
+.galleryCard .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.galleryCard:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.galleryCard .card-body {
+    padding: 1.25rem;
+    min-height: 80px;
+    /* Altura mínima para el cuerpo de la tarjeta */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.galleryCard .card-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 991.98px) {
+    .imageContainer {
+        height: 180px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .imageContainer {
+        height: 200px;
+    }
+
+    .galleryCard .card-body {
+        padding: 1rem;
+    }
+
+    .galleryCard .card-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .imageContainer {
+        height: 180px;
+    }
+
+    .galleryCard .card-body {
+        padding: 0.75rem;
+        min-height: 60px;
+    }
+}
+
+/* Estilos para el modal */
+.modalCustom .modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modalCustom .modal-header {
+    background-color: #343a40;
+    color: white;
+    border-bottom: 1px solid #454d55;
+    padding: 1rem 1.5rem;
+}
+
+.modalCustom .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.8;
+}
+
+.modalCustom .modal-header .btn-close:hover {
+    opacity: 1;
+}
+
+.modalCustom .modal-body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+.modalCustom .modal-footer {
+    background-color: #343a40;
+    border-top: 1px solid #454d55;
+    padding: 0.75rem 1.5rem;
+}
+
+.modalCustom .modal-footer .btn {
+    min-width: 100px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 767.98px) {
+    .modalCustom .modal-dialog {
+        margin: 0.5rem;
+        width: calc(100% - 1rem);
+    }
+
+    .modalCustom .modal-header,
+    .modalCustom .modal-footer {
+        padding: 0.75rem 1rem;
+    }
+}
